@@ -1,7 +1,7 @@
 apiVersion: kappctrl.k14s.io/v1alpha1
 kind: App
 metadata:
-  name: spring-petclinic
+  name: spring-petclinic-minimal
   namespace: default
 spec:
   serviceAccountName: kapp-ns-admin
@@ -9,7 +9,7 @@ spec:
   - git:
       url: https://github.com/vmware-tanzu-labs/tdc-carvel-examples
       ref: origin/main
-      subPath: template
+      subPath: minimal
   template:
   - ytt: {}
   deploy:

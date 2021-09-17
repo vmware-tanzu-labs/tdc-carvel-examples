@@ -1,0 +1,16 @@
+apiVersion: kappctrl.k14s.io/v1alpha1
+kind: App
+metadata:
+  name: ns-default
+  namespace: apps-mgmt
+spec:
+  serviceAccountName: kapp-cluster-admin
+  fetch:
+    - git:
+        url: https://github.com/vmware-tanzu-labs/tdc-carvel-examples
+        ref: origin/main
+        subPath: ns-rbac
+  template:
+    - ytt: {}
+  deploy:
+    - kapp: {}
