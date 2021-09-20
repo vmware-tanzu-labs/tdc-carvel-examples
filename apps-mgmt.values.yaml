@@ -1,0 +1,7 @@
+#! this is a values file for ./ns-rbac that creates the apps-mgmt Namespace
+---
+createNs: true
+namespace: apps-mgmt
+serviceAccount: kapp-cluster-admin
+clusterRole: cluster-admin
+clusterRoleBind: true
