@@ -9,12 +9,12 @@ spec:
   - git:
       url: https://github.com/vmware-tanzu-labs/tdc-carvel-examples
       ref: origin/main
-      subPath: template
+      subPath: app-template
   template:
   - ytt: {}
   deploy:
   - kapp:
-      # All of our apps resources are normally in the default namespace.
+      # All of our apps resources are in the dev namespace.
       # Here we can re-target the app to be deployed to test.
       mapNs:
-        - default=test
+        - dev=test

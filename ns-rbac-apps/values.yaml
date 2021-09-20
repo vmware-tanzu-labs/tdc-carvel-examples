@@ -1,7 +1,7 @@
 #@data/values-schema
 ---
 createNs: true
-namespace: default
+namespace: dev
 serviceAccount: kapp-ns-admin
 #! See `kubectl get clusterroles | grep -v system:` for a list of clusterRoles
 clusterRole: admin
