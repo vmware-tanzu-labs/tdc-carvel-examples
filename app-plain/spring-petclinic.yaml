@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: spring-petclinic
-        image: springcommunity/spring-framework-petclinic
+        image: springio/petclinic:latest
         ports:
         - name: http
           containerPort: 8080
